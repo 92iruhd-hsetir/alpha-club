@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkalpha_club=self.webpackChunkalpha_club||[]).push([[246],{103:function(e,n,a){a.r(n);a(791);var r=a(184);n.default=function(e){var n=e.enterHome;return(0,r.jsx)("div",{className:"heroBanner__wrap",children:(0,r.jsx)("div",{className:"heroBanner__cta",children:(0,r.jsx)("a",{onClick:function(){return n()},children:(0,r.jsx)("img",{src:"".concat("","images/enter-cta.jpg"),alt:"Enter",title:"Click to Enter"})})})})}}}]);
+//# sourceMappingURL=landing.af355ca5.chunk.js.map
