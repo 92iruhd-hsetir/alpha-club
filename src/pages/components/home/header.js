@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Header({ imageBasePath, menuList }) {
+function Header({ urlBasePath, imageBasePath, menuList }) {
     let [isHamburgerOpened, toggleHamburger] = useState(false);
     const hamburgerToggle = () => {
         toggleHamburger(!isHamburgerOpened);
@@ -25,7 +25,7 @@ function Header({ imageBasePath, menuList }) {
             <div className="main__container">
                 <div className="header__box">
                     <div className="header__logo">
-                        <a href="/">
+                        <a href={urlBasePath}>
                             <img src={`${imageBasePath}logo.jpg`} alt="Alpha Book Writers Club" title="Alpha Book Writers Club" />
                         </a>
                     </div>

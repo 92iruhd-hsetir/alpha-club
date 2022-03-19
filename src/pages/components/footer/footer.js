@@ -1,7 +1,6 @@
 import React from "react";
 
-function footer() {
-    let imageBasePath = `${process.env.PUBLIC_URL}/images/`;
+function footer({ imageBasePath }) {
     const footerLinks = [
         // {
         //     text: "Terms & Conditions",
@@ -74,11 +73,11 @@ function footer() {
                                 {
                                     socialLinks.map((s, idx) => {
                                         return (
-                                        <li key={idx}>
-                                            <a href={s.link}>
-                                                <img src={s.icon} alt={s.alt} title={s.title} />
-                                            </a>
-                                        </li>
+                                            <li key={idx}>
+                                                <a href={s.link}>
+                                                    <img src={s.icon} alt={s.alt} title={s.title} />
+                                                </a>
+                                            </li>
                                         )
                                     })
                                 }

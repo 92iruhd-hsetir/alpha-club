@@ -6,11 +6,10 @@ const Teams = lazy(() => import(/* webpackChunkName: "teams" */ './teams'))
 const Books = lazy(() => import(/* webpackChunkName: "books" */ './books'))
 const Faqs = lazy(() => import(/* webpackChunkName: "faqs" */ './faqs'))
 
-function Home() {
-    let imageBasePath = `${process.env.PUBLIC_URL}/images/`;
+function Home({urlBasePath, imageBasePath}) {
     const menus = [
         /* {
-            route: "/",
+            route: urlBasePath,
             name: "mint",
             isPageRoute: true
         }, */
@@ -47,7 +46,7 @@ function Home() {
     ];
     return (
         <>
-            <Header imageBasePath={imageBasePath} menuList={menus} />
+            <Header urlBasePath={urlBasePath} imageBasePath={imageBasePath} menuList={menus} />
             <section className="hp__banner aos-init" data-aos="fade"></section>
             {
                 menus.map((m, idx) => {

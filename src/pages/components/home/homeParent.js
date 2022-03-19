@@ -3,7 +3,7 @@ import React, {lazy, useState} from 'react';
 const Landing = lazy(() => import(/* webpackChunkName: "landing" */ './landing'))
 const Home = lazy(() => import(/* webpackChunkName: "home" */ './home'))
 
-function HomeParent () {
+function HomeParent ({urlBasePath, imageBasePath}) {
     const [page, setPage] = useState('');
     const enterHome = () => {
         setPage('home')
@@ -11,9 +11,9 @@ function HomeParent () {
 
     let comp = null;
     if(page === 'home') {
-        comp = <Home />
+        comp = <Home urlBasePath={urlBasePath} imageBasePath={imageBasePath} />
     } else {
-        comp = <Landing enterHome={enterHome} />
+        comp = <Landing imageBasePath={imageBasePath} enterHome={enterHome} />
     }
     
     return (comp)

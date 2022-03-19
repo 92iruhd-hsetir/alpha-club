@@ -9,17 +9,19 @@ const Footer = lazy(() => import(/* webpackChunkName: "footer" */ './components/
 const Orientation = lazy(() => import(/* webpackChunkName: "orientation" */ './common/orientation'));
 
 function Router() {
+    let urlBasePath = `${process.env.PUBLIC_URL}/`;
+    let imageBasePath = `${urlBasePath}images/`;
     useEffect(() => {
         AOS.init();
     }, []);
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={urlBasePath}>
             <Suspense fallback={<PageLoader />}>
                 <Routes>
-                    <Route path="/" element={<HomeParent />} />
+                    <Route path="/" element={<HomeParent urlBasePath={urlBasePath} imageBasePath={imageBasePath} />} />
                 </Routes>
-                <Footer />
-                <Orientation />
+                <Footer imageBasePath={imageBasePath} />
+                <Orientation imageBasePath={imageBasePath} />
             </Suspense>
         </BrowserRouter>
     );
