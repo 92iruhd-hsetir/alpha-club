@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { lazy, useState, useEffect } from "react";
 const Header = lazy(() => import(/* webpackChunkName: "header" */ './header'))
 const HowItWork = lazy(() => import(/* webpackChunkName: "howItWork" */ './howItWork'))
 const Tiers = lazy(() => import(/* webpackChunkName: "tiers" */ './tiers'))
@@ -6,7 +6,8 @@ const Teams = lazy(() => import(/* webpackChunkName: "teams" */ './teams'))
 const Books = lazy(() => import(/* webpackChunkName: "books" */ './books'))
 const Faqs = lazy(() => import(/* webpackChunkName: "faqs" */ './faqs'))
 
-function Home({urlBasePath, imageBasePath}) {
+function Home({ urlBasePath, imageBasePath }) {
+    const [activeMenu, setActiveMenu] = useState(null);
     const menus = [
         /* {
             route: urlBasePath,
@@ -44,14 +45,48 @@ function Home({urlBasePath, imageBasePath}) {
             component: <Faqs key="5" imageBasePath={imageBasePath} />
         }
     ];
+
+    useEffect(() => {
+        const isInViewport = (selector) => {
+            let target = document.getElementById(selector);
+            let settings = target.getBoundingClientRect();
+            let header = document.getElementById("header");
+            let buffer = header.offsetHeight; // menu height
+            let isTargetCrossedTop = (buffer > settings.top);
+            let isTargetReachedBottom = (buffer < settings.bottom);
+            if (isTargetCrossedTop && isTargetReachedBottom) {
+                return selector;
+            } else {
+                return null;
+            }
+        }
+        const handleScroll = () => {
+            for (let i = 0; i < menus.length; i++) {
+                let m = menus[i];
+                if (!m.isPageRoute) {
+                    let activeSelector = isInViewport(m.selector);
+                    if (activeSelector) {
+                        setActiveMenu(activeSelector);
+                        break;
+                    } else {
+                        setActiveMenu(null);
+                    }
+                }
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [])
     return (
         <>
-            <Header urlBasePath={urlBasePath} imageBasePath={imageBasePath} menuList={menus} />
+            <Header urlBasePath={urlBasePath} imageBasePath={imageBasePath} activeMenu={activeMenu} menuList={menus} />
             <section className="hp__banner aos-init" data-aos="fade"></section>
             {
-                menus.map((m, idx) => {
+                menus.map(m => {
                     if (!m.isPageRoute) {
-                        return (<div key={idx}>{m.component}</div>)
+                        return (m.component)
                     }
                     return null;
                 })

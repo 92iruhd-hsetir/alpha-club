@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Header({ urlBasePath, imageBasePath, menuList }) {
+function Header({ urlBasePath, imageBasePath, activeMenu, menuList }) {
     let [isHamburgerOpened, toggleHamburger] = useState(false);
     const hamburgerToggle = () => {
         toggleHamburger(!isHamburgerOpened);
@@ -11,10 +11,10 @@ function Header({ urlBasePath, imageBasePath, menuList }) {
         }
         let target = document.getElementById(m.selector);
         if(target) {
-            var settings = target.getBoundingClientRect(); //positions of target element
-            var pagePosition = window.pageYOffset; //position of current scroll
+            let settings = target.getBoundingClientRect(); //positions of target element
+            let pagePosition = window.pageYOffset; //position of current scroll
             // let header = document.getElementById("header");
-            var buffer = 0;//header.offsetHeight; //header height need to exclude
+            let buffer = 0;//header.offsetHeight; //header height need to exclude
             window.scroll({ top: (settings.top+pagePosition-buffer),  left: 0,  behavior: 'smooth' });
         }
         return null;
@@ -38,7 +38,7 @@ function Header({ urlBasePath, imageBasePath, menuList }) {
                                             {
                                                 m.isPageRoute ?
                                                     <a href={m.route}>{m.name}</a>:
-                                                    <a className="page-scroll" onClick={() => clickMenuItem(m)}>{m.name}</a>
+                                                    <a className={`page-scroll ${(activeMenu === m.selector) ? 'active' : ''}`} onClick={() => clickMenuItem(m)}>{m.name}</a>
                                             }
                                             
                                         </li>
