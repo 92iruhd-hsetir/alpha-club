@@ -75,7 +75,7 @@ function footer({ imageBasePath }) {
                                         return (
                                             <li key={idx}>
                                                 <a href={s.link}>
-                                                    <img src={s.icon} alt={s.alt} title={s.title} />
+                                                    <img src={s.icon} alt={s.alt} title={s.title} target="_blank" />
                                                 </a>
                                             </li>
                                         )

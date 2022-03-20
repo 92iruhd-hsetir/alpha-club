@@ -10,11 +10,11 @@ function Header({ urlBasePath, imageBasePath, menuList }) {
             hamburgerToggle();
         }
         let target = document.getElementById(m.selector);
-        let header = document.getElementById("header");
         if(target) {
             var settings = target.getBoundingClientRect(); //positions of target element
             var pagePosition = window.pageYOffset; //position of current scroll
-            var buffer = header.offsetHeight; //header height need to exclude
+            // let header = document.getElementById("header");
+            var buffer = 0;//header.offsetHeight; //header height need to exclude
             window.scroll({ top: (settings.top+pagePosition-buffer),  left: 0,  behavior: 'smooth' });
         }
         return null;

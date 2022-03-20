@@ -72,7 +72,7 @@ function Teams({ imageBasePath }) {
                                                     </div>
                                                 </div> */}
                                                 <div className="team__social">
-                                                    <a href={t.twitterLink}>
+                                                    <a href={t.twitterLink} target="_blank">
                                                         <img src={`${imageBasePath}socialIcons/twitter.svg`} alt={t.username} title={t.username} />
                                                     </a>
                                                 </div>

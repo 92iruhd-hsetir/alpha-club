@@ -91,7 +91,7 @@ function Faqs() {
         <section id="faqs" className="section-row-inner section--faq">
             <div className="main__container--fluid">
                 <div className="main__container">
-                    <h1 className="section-heading aos-init" data-aos="fade">
+                    <h1 className="section-heading">
                         <span>Frequently Asked Questions</span>
                     </h1>
 
@@ -101,7 +101,7 @@ function Faqs() {
                                 {
                                     questions.map((q, idx) => {
                                         return (
-                                            <div key={idx} className={`accordion__box ${(idx === activeAccordion ? 'active' : '')} aos-init`} data-aos="fade-in">
+                                            <div key={idx} className={`accordion__box ${(idx === activeAccordion ? 'active' : '')}`}>
                                                 <div className="accordion__head" onClick={() => setAccord(idx)}>
                                                     <span>{q.title}</span>
                                                 </div>

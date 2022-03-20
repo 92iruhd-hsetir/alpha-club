@@ -10,36 +10,36 @@ function Home({urlBasePath, imageBasePath}) {
     const menus = [
         /* {
             route: urlBasePath,
-            name: "mint",
+            name: "Mint",
             isPageRoute: true
         }, */
         {
             route: "/#howItWork",
-            name: "how it works",
+            name: "How it works",
             selector: "howItWork",
             component: <HowItWork key="1" imageBasePath={imageBasePath} />
         },
         {
             route: "/#tiers",
-            name: "tiers",
+            name: "Tiers",
             selector: "tiers",
             component: <Tiers key="2" imageBasePath={imageBasePath} />
         },
         {
             route: "/#teams",
-            name: "team",
+            name: "Team",
             selector: "teams",
             component: <Teams key="3" imageBasePath={imageBasePath} />
         },
         {
             route: "/#books",
-            name: "book",
+            name: "Book",
             selector: "books",
             component: <Books key="4" imageBasePath={imageBasePath} />
         },
         {
             route: "/#faqs",
-            name: "faqs",
+            name: "Faqs",
             selector: "faqs",
             component: <Faqs key="5" imageBasePath={imageBasePath} />
         }
