@@ -1,35 +1,35 @@
 {
   "files": {
     "main.css": "/alpha-club/static/css/main.91e5d2a2.css",
-    "main.js": "/alpha-club/static/js/main.82600b4b.js",
+    "main.js": "/alpha-club/static/js/main.72a2a4cc.js",
     "homeParent.js": "/alpha-club/static/js/homeParent.ae24d91f.chunk.js",
-    "footer.js": "/alpha-club/static/js/footer.054fe547.chunk.js",
+    "footer.js": "/alpha-club/static/js/footer.fecd268c.chunk.js",
     "orientation.js": "/alpha-club/static/js/orientation.d42072d4.chunk.js",
     "landing.js": "/alpha-club/static/js/landing.09a33b4e.chunk.js",
-    "home.js": "/alpha-club/static/js/home.72973a38.chunk.js",
-    "header.js": "/alpha-club/static/js/header.3d0712f2.chunk.js",
+    "home.js": "/alpha-club/static/js/home.f98cd7f4.chunk.js",
+    "header.js": "/alpha-club/static/js/header.7a22ef60.chunk.js",
     "howItWork.js": "/alpha-club/static/js/howItWork.b1e88ad8.chunk.js",
     "tiers.js": "/alpha-club/static/js/tiers.05d91fc3.chunk.js",
-    "teams.js": "/alpha-club/static/js/teams.f1183fc2.chunk.js",
+    "teams.js": "/alpha-club/static/js/teams.752afe6b.chunk.js",
     "books.js": "/alpha-club/static/js/books.f2a6fbdf.chunk.js",
-    "faqs.js": "/alpha-club/static/js/faqs.d685abe0.chunk.js",
+    "faqs.js": "/alpha-club/static/js/faqs.444dee5e.chunk.js",
     "index.html": "/alpha-club/index.html",
     "main.91e5d2a2.css.map": "/alpha-club/static/css/main.91e5d2a2.css.map",
-    "main.82600b4b.js.map": "/alpha-club/static/js/main.82600b4b.js.map",
+    "main.72a2a4cc.js.map": "/alpha-club/static/js/main.72a2a4cc.js.map",
     "homeParent.ae24d91f.chunk.js.map": "/alpha-club/static/js/homeParent.ae24d91f.chunk.js.map",
-    "footer.054fe547.chunk.js.map": "/alpha-club/static/js/footer.054fe547.chunk.js.map",
+    "footer.fecd268c.chunk.js.map": "/alpha-club/static/js/footer.fecd268c.chunk.js.map",
     "orientation.d42072d4.chunk.js.map": "/alpha-club/static/js/orientation.d42072d4.chunk.js.map",
     "landing.09a33b4e.chunk.js.map": "/alpha-club/static/js/landing.09a33b4e.chunk.js.map",
-    "home.72973a38.chunk.js.map": "/alpha-club/static/js/home.72973a38.chunk.js.map",
-    "header.3d0712f2.chunk.js.map": "/alpha-club/static/js/header.3d0712f2.chunk.js.map",
+    "home.f98cd7f4.chunk.js.map": "/alpha-club/static/js/home.f98cd7f4.chunk.js.map",
+    "header.7a22ef60.chunk.js.map": "/alpha-club/static/js/header.7a22ef60.chunk.js.map",
     "howItWork.b1e88ad8.chunk.js.map": "/alpha-club/static/js/howItWork.b1e88ad8.chunk.js.map",
     "tiers.05d91fc3.chunk.js.map": "/alpha-club/static/js/tiers.05d91fc3.chunk.js.map",
-    "teams.f1183fc2.chunk.js.map": "/alpha-club/static/js/teams.f1183fc2.chunk.js.map",
+    "teams.752afe6b.chunk.js.map": "/alpha-club/static/js/teams.752afe6b.chunk.js.map",
     "books.f2a6fbdf.chunk.js.map": "/alpha-club/static/js/books.f2a6fbdf.chunk.js.map",
-    "faqs.d685abe0.chunk.js.map": "/alpha-club/static/js/faqs.d685abe0.chunk.js.map"
+    "faqs.444dee5e.chunk.js.map": "/alpha-club/static/js/faqs.444dee5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91e5d2a2.css",
-    "static/js/main.82600b4b.js"
+    "static/js/main.72a2a4cc.js"
   ]
 }
