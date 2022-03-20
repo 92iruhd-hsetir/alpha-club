@@ -30,9 +30,10 @@ function Teams({ imageBasePath }) {
             intro: "Lorem ipsum dolor sit amet, consectetur adip iscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         }
     ]
+    let isMobile = window.innerWidth <= 768;
     const getAosDelay = (idx) => {
         let baseDelay = 500;
-        let maxcols = 3; // set 1 for mobile
+        let maxcols = isMobile ? 1 : 3; // set 1 for mobile
         let delayDiff = 100;
         return ( baseDelay + (( idx % maxcols ) * delayDiff ));
     }
