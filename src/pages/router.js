@@ -16,7 +16,7 @@ function Router() {
     }, []);
     return (
         <BrowserRouter basename={urlBasePath}>
-            <Suspense fallback={<PageLoader />}>
+            <Suspense fallback={<PageLoader imageBasePath={imageBasePath} />}>
                 <Routes>
                     <Route path="/" element={<HomeParent urlBasePath={urlBasePath} imageBasePath={imageBasePath} />} />
                 </Routes>
