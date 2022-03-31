@@ -2,7 +2,7 @@ import React from "react";
 
 function Books({ imageBasePath }) {
     const bookList = [
-        {
+        /* {
             title: "Who Else Wants To Be A New York Times Bestselling Author?",
             imageName: "books/book-cover.png",
             alt: "Who Else Wants To Be A New York Times Bestselling Author?",
@@ -20,17 +20,17 @@ function Books({ imageBasePath }) {
                     content: "For early access, visit our Discord and grab your WL spot."
                 }
             ]
-        },
+        }, */
         {
-            title: "What’s this book about?",
+            title: "What's The Book About?",
             imageName: "books/book-art.png",
-            alt: "What’s this book about?",
+            alt: "What's The Book About?",
             details: [
                 {
                     type: "para",
-                    content: "Simply put, the book is NFTs. But as you know, the rabbit hole goes deep. My goal is to see just how deep we can go. Literally,  nothing is off-limits:"
+                    content: "We’re at a generational crossroads - an artistic, financial, cultural and technological renaissance is happening right before our eyes - and NFTs are at the center."
                 },
-                {
+                /* {
                     type: "bullets",
                     content: [
                         "Web3 & decentralization",
@@ -40,11 +40,23 @@ function Books({ imageBasePath }) {
                         "Culture",
                         "New world order",
                     ]
+                }, */
+                {
+                    type: "para",
+                    content: "As a community, we can standby and let someone else tell our story, and therefore create our future."
                 },
                 {
                     type: "para",
-                    content: "Ultimately, We’re going to celebrate and champion the NFTs space. And we’re going to do it as a community. This is a unique opportunity to educate the masses, onboard millions of new users and lift the entire NFT community. A rising tide really does lift all ships."
-                }
+                    content: "Or we can come together, take control of the narrative, and create our own future with the story we choose to tell."
+                },
+                {
+                    type: "para",
+                    content: "It’s up to us."
+                },
+                {
+                    type: "para",
+                    content: "Our goal for this project is to bring together the brightest minds in the NFT space to defend, celebrate and champion NFTs. And we’re gonna do it as a community."
+                },
             ]
         }
     ]

@@ -21,6 +21,12 @@ function Home({ urlBasePath, imageBasePath }) {
             component: <HowItWork key="1" imageBasePath={imageBasePath} />
         },
         {
+            route: "/#books",
+            name: "Book",
+            selector: "books",
+            component: <Books key="4" imageBasePath={imageBasePath} />
+        },
+        {
             route: "/#tiers",
             name: "Tiers",
             selector: "tiers",
@@ -31,12 +37,6 @@ function Home({ urlBasePath, imageBasePath }) {
             name: "Team",
             selector: "teams",
             component: <Teams key="3" imageBasePath={imageBasePath} />
-        },
-        {
-            route: "/#books",
-            name: "Book",
-            selector: "books",
-            component: <Books key="4" imageBasePath={imageBasePath} />
         },
         {
             route: "/#faqs",

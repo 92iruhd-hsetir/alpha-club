@@ -42,11 +42,11 @@ function Teams({ imageBasePath }) {
         <section id="teams" className="section-row-inner section--team">
             <div className="main__container--fluid">
                 <div className="main__container">
-                    <h3 className="section-lbl aos-init" data-aos="fade">
-                        <span>TEAM</span>
-                    </h3>
-                    <h1 className="section-heading aos-init" data-aos="fade">
+                    {/* <h3 className="section-lbl aos-init" data-aos="fade">
                         <span>Genius minds behind this program for you</span>
+                    </h3> */}
+                    <h1 className="section-heading aos-init" data-aos="fade">
+                        <span>TEAM</span>
                     </h1>
                     <div className="team__list">
                         <ul>
